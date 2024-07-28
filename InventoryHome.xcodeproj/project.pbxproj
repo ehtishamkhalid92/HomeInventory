@@ -16,6 +16,8 @@
 		0ABDEDA92C565ED8001DA960 /* InventoryHomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABDEDA82C565ED8001DA960 /* InventoryHomeTests.swift */; };
 		0ABDEDB32C565ED8001DA960 /* InventoryHomeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABDEDB22C565ED8001DA960 /* InventoryHomeUITests.swift */; };
 		0ABDEDB52C565ED8001DA960 /* InventoryHomeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABDEDB42C565ED8001DA960 /* InventoryHomeUITestsLaunchTests.swift */; };
+		0ABDEDC22C565F6D001DA960 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABDEDC12C565F6D001DA960 /* AddItemView.swift */; };
+		0ABDEDC42C56651A001DA960 /* UpdateQuantityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABDEDC32C56651A001DA960 /* UpdateQuantityView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		0ABDEDAE2C565ED8001DA960 /* InventoryHomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InventoryHomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ABDEDB22C565ED8001DA960 /* InventoryHomeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryHomeUITests.swift; sourceTree = "<group>"; };
 		0ABDEDB42C565ED8001DA960 /* InventoryHomeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryHomeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0ABDEDC12C565F6D001DA960 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
+		0ABDEDC32C56651A001DA960 /* UpdateQuantityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateQuantityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 				0ABDED9B2C565ED8001DA960 /* Persistence.swift */,
 				0ABDED9D2C565ED8001DA960 /* InventoryHome.xcdatamodeld */,
 				0ABDED982C565ED8001DA960 /* Preview Content */,
+				0ABDEDC12C565F6D001DA960 /* AddItemView.swift */,
+				0ABDEDC32C56651A001DA960 /* UpdateQuantityView.swift */,
 			);
 			path = InventoryHome;
 			sourceTree = "<group>";
@@ -265,8 +271,10 @@
 			files = (
 				0ABDED9C2C565ED8001DA960 /* Persistence.swift in Sources */,
 				0ABDED9F2C565ED8001DA960 /* InventoryHome.xcdatamodeld in Sources */,
+				0ABDEDC42C56651A001DA960 /* UpdateQuantityView.swift in Sources */,
 				0ABDED952C565ED7001DA960 /* ContentView.swift in Sources */,
 				0ABDED932C565ED7001DA960 /* InventoryHomeApp.swift in Sources */,
+				0ABDEDC22C565F6D001DA960 /* AddItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
