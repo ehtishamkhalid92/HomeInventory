@@ -15,18 +15,22 @@ struct ContentView: View {
         animation: .default)
     private var items: FetchedResults<Item>
 
-    @State private var selectedCategory: String = "All"
+    @State private var selectedCategory: String = ""
     @State private var showingAddItemView = false
     @State private var showingUpdateQuantityView = false
     @State private var itemToUpdate: Item?
 
     var categories: [String] {
         let allCategories = items.compactMap { $0.category }
-        return ["All"] + Set(allCategories).sorted()
+        var uniqueCategories = Set(allCategories).sorted()
+        if !uniqueCategories.isEmpty {
+            uniqueCategories.insert("All", at: 0)
+        }
+        return uniqueCategories
     }
 
     var filteredItems: [Item] {
-        if selectedCategory == "All" {
+        if selectedCategory == "All" || selectedCategory.isEmpty {
             return Array(items)
         } else {
             return items.filter { $0.category == selectedCategory }
@@ -36,13 +40,15 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Picker("Category", selection: $selectedCategory) {
-                    ForEach(categories, id: \.self) { category in
-                        Text(category).tag(category)
+                if !categories.isEmpty {
+                    Picker("Category", selection: $selectedCategory) {
+                        ForEach(categories, id: \.self) { category in
+                            Text(category).tag(category)
+                        }
                     }
+                    .pickerStyle(SegmentedPickerStyle())
+                    .padding()
                 }
-                .pickerStyle(SegmentedPickerStyle())
-                .padding()
 
                 List {
                     ForEach(filteredItems) { item in
